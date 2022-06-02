@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface Vehicle {
+   __ methods __
+  + PayTheTransport()
+  + getNextStop()
+   + getCurrentStop()
+   + getScheduledCourse()
+}
+class Bus{
+ - List<String> Stop
+ - List<String> nextDestination
+ -List<String> ScheduledCourse
+ ____
+ + PayTheTransport()
+ +getNextStop()
+ +getCurrentStop()
+ +getScheduledCourse()
+
+ }
+class Tram {
+- List<String> Stop
+ - List<String> nextDestination
+ -List<String> ScheduledCourse
+ ____
+ + PayTheTransport()
+ +getNextStop()
+ +getCurrentStop()
+ +getScheduledCourse()
+}
+class Train{
+- List<String> Stop
+ - List<String> nextDestination
+ -List<String> ScheduledCourse
+ ____
+ + PayTheTransport()
+ +getNextStop()
+ +getCurrentStop()
+ +getScheduledCourse()
+}
+
+
+Tram ..>Vehicle
+Bus ..>Vehicle
+Train ..>Vehicle
+
+
+
+@enduml
